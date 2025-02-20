@@ -1,0 +1,26 @@
+Colab: 
+	Inference: https://colab.research.google.com/drive/1ycdjNcTIJT1-B21rZf27D0PntF5PT2Nw#scrollTo=qTDbLdQSdy4N
+
+	Training:
+
+
+Local:
+
+	Setup:
+
+	python3.11 -m venv myvenv
+	source myvenv/bin/activate
+	pip install -r requirements.txt
+	pip install torch-scatter
+	python setup.py develop
+	pip install matplotlib
+	python download_pretrained_models.py
+	pip install gdown
+	gdown 1gIJVKyeIu4PQshZnHG6TWj5kSZjnMb2_
+	unzip PaintBucket_Char.zip
+	mv train dataset
+	mv test/PaintBucket_Char dataset/test
+
+	Inference:
+
+	python inference_line_frames.py --path dataset/test/laughing_girl

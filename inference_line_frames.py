@@ -161,7 +161,7 @@ if __name__ == "__main__":
             clip_resolution=(320, 320),
         )
 
-    model = model.cuda()
+    #model = model.cuda()
     model.load_state_dict(load_params(ckpt_path))
     model.eval()
 
